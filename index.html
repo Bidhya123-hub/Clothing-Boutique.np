@@ -3,287 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UrbanTrend Fashion Store</title>
-
+<title>Trendify Clothing Store</title>
 <style>
+/* --- Reset & Basic --- */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background:#f8f8f8; }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f5f5f5;
+/* --- Header --- */
+header {
+  background:#222; color:white; padding:15px 30px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+header .logo { font-size:28px; color:#ff4d6d; font-weight:bold; }
+header nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+header nav a:hover { color:#ffb347; }
+
+/* --- Banner --- */
+.banner {
+  background:url('https://images.unsplash.com/photo-1618354695035-fbaf86d93c85') center/cover no-repeat;
+  height:300px; display:flex; align-items:center; justify-content:center; color:white;
+  font-size:36px; font-weight:bold; text-shadow:2px 2px 5px rgba(0,0,0,0.7);
 }
 
-/* Header */
-
-header{
-background:black;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
+/* --- Products Section --- */
+.products {
+  padding:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:25px;
 }
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#ff4d6d;
+.product {
+  background:white; border-radius:10px; padding:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s; text-align:center;
 }
+.product:hover { transform:translateY(-8px); }
+.product img { width:100%; height:220px; object-fit:cover; border-radius:8px; }
+.product h3 { margin:12px 0 5px; font-size:18px; }
+.product p { margin:5px 0; font-weight:bold; color:#ff4d6d; }
+button { padding:10px 15px; margin:5px; border:none; border-radius:5px; cursor:pointer; }
+.add-cart { background:#ff4d6d; color:white; }
+.buy-now { background:#25D366; color:white; }
 
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
+/* --- Location Section --- */
+.location {
+  background:#fff; padding:30px; margin:40px; border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center;
 }
+.location h2 { margin-bottom:15px; }
+.location p { font-size:18px; color:#555; }
 
-nav a:hover{
-color:#ff4d6d;
-}
-
-/* Banner */
-
-.banner{
-height:350px;
-background:url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-size:40px;
-font-weight:bold;
-}
-
-/* Products */
-
-.products{
-padding:40px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.product{
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-transition:0.3s;
-}
-
-.product:hover{
-transform:translateY(-8px);
-}
-
-.product img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:8px;
-}
-
-.product h3{
-margin:10px 0;
-}
-
-.price{
-color:#ff4d6d;
-font-weight:bold;
-}
-
-/* Buttons */
-
-button{
-border:none;
-padding:10px 15px;
-margin:5px;
-border-radius:5px;
-cursor:pointer;
-}
-
-.cart{
-background:#ff4d6d;
-color:white;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-/* Footer */
-
-footer{
-background:black;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
+/* --- Footer --- */
+footer {
+  background:#222; color:white; text-align:center; padding:20px; margin-top:40px;
+  font-size:14px;
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">UrbanTrend</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Boys</a>
-<a href="#">Girls</a>
-<a href="#">Contact</a>
-</nav>
+  <div class="logo">Trendify</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Boys</a>
+    <a href="#">Girls</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <div class="banner">
-New Trend Fashion
+Trending Fashion 2026
 </div>
 
 <section class="products">
 
-<!-- 1 -->
+<!-- Product 1 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-<h3>Oversized T-Shirt</h3>
-<p class="price">$20</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
+<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2" alt="Shirt">
+<h3>Classic Boys Shirt</h3>
+<p>$25</p>
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
 </div>
 
-<!-- 2 -->
+<!-- Product 2 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2">
-<h3>Denim Jacket</h3>
-<p class="price">$45</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1" alt="Pant">
+<h3>Denim Boys Pant</h3>
+<p>$35</p>
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
 </div>
 
-<!-- 3 -->
+<!-- Product 3 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
-<h3>Casual Shirt</h3>
-<p class="price">$30</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Shirt">
+<h3>Girls Casual Shirt</h3>
+<p>$28</p>
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
 </div>
 
-<!-- 4 -->
+<!-- Product 4 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
-<h3>Black Pants</h3>
-<p class="price">$35</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Skirt">
+<h3>Girls Trendy Skirt</h3>
+<p>$32</p>
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
 </div>
 
-<!-- 5 -->
+<!-- Product 5 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-<h3>One Piece Dress</h3>
-<p class="price">$50</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
+<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4" alt="T-shirt">
+<h3>Unisex T-Shirt</h3>
+<p>$20</p>
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
 </div>
 
-<!-- 6 -->
+<!-- Product 6 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4">
-<h3>Mini Skirt</h3>
-<p class="price">$28</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
-</div>
-
-<!-- 7 -->
-<div class="product">
-<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96">
+<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96" alt="Shorts">
 <h3>Summer Shorts</h3>
-<p class="price">$22</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
-</div>
-
-<!-- 8 -->
-<div class="product">
-<img src="https://images.unsplash.com/photo-1520974735194-1c2bba7c0a52">
-<h3>Formal Coat</h3>
-<p class="price">$70</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
-</div>
-
-<!-- 9 -->
-<div class="product">
-<img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9">
-<h3>Graphic T-Shirt</h3>
-<p class="price">$18</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
-</div>
-
-<!-- 10 -->
-<div class="product">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-<h3>Stylish Hoodie</h3>
-<p class="price">$40</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
-</div>
-
-<!-- 11 -->
-<div class="product">
-<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae">
-<h3>Girls Crop Top</h3>
-<p class="price">$25</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
-</div>
-
-<!-- 12 -->
-<div class="product">
-<img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070">
-<h3>Denim Jeans</h3>
-<p class="price">$38</p>
-<button class="cart">Add to Cart</button>
-<a href="https://wa.me/9779800000000">
-<button class="whatsapp">WhatsApp</button>
-</a>
+<p>$22</p>
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
 </div>
 
 </section>
 
+<section class="location">
+<h2>Our Store Location</h2>
+<p>New Baneshwor, Kathmandu, Nepal</p>
+<p>Open: 10AM - 8PM, Mon-Sat</p>
+</section>
+
 <footer>
-<p>UrbanTrend Fashion Store</p>
-<p>WhatsApp Order: +977 9800000000</p>
+<p>&copy; 2026 Trendify Clothing Store | Contact: +977 9800000000</p>
 </footer>
 
 </body>

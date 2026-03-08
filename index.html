@@ -3,207 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trendify Clothing Store</title>
+<title>Trendy Fashion Store</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4;}
-header{background:#222;color:white;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;}
-header .logo{font-size:28px;color:#ff4d6d;font-weight:bold;}
-header nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
-header nav a:hover{color:#ffb347;}
-.banner{background:url('images/banner.jpg') center/cover no-repeat;height:300px;display:flex;align-items:center;justify-content:center;color:white;font-size:36px;font-weight:bold;text-shadow:2px 2px 5px rgba(0,0,0,0.7);}
-.products{padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
-.product{background:white;border-radius:10px;padding:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;transition:0.3s;}
-.product:hover{transform:translateY(-8px);}
-.product img{width:100%;height:250px;object-fit:cover;border-radius:8px;}
-.product h3{margin:12px 0 5px;font-size:18px;}
-.product p{margin:5px 0;font-weight:bold;color:#ff4d6d;}
-select{padding:5px;margin:5px;border-radius:5px;border:1px solid #ccc;}
-button{padding:10px 15px;margin:5px;border:none;border-radius:5px;cursor:pointer;}
-.add-cart{background:#ff4d6d;color:white;}
-.buy-now{background:#25D366;color:white;}
-.location{background:#fff;padding:30px;margin:40px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;}
-.location h2{margin-bottom:15px;}
-.location p{font-size:18px;color:#555;}
-footer{background:#222;color:white;text-align:center;padding:20px;margin-top:40px;font-size:14px;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ff8c75;
+}
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover { background-color: #ff6f61; }
+.container { width: 90%; margin: 20px auto; }
+.search-bar { text-align: center; margin-bottom: 20px; }
+.search-bar input, .search-bar select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-card h3 { margin: 10px 0 5px; }
+.product-card p { margin: 5px 0; }
+.product-card select { margin: 5px; padding: 5px; }
+.product-card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-card button:hover { background-color: #ff3b2e; }
+.review {
+    color: #f39c12;
+    margin: 5px 0;
+    font-size: 14px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff8c75;
+    color: white;
+    margin-top: 40px;
+}
+h2 { margin-top: 40px; }
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">Trendify</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Boys</a>
-<a href="#">Girls</a>
-<a href="#">Contact</a>
-</nav>
+    <h1>Trendy Fashion Store</h1>
 </header>
 
-<div class="banner">
-Trending Fashion 2026
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Boys</a>
+    <a href="#">Girls</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <!-- Search and filter -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+        <select>
+            <option value="">Filter by size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>
+        <select>
+            <option value="">Filter by color</option>
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Black</option>
+            <option>Green</option>
+            <option>Pink</option>
+            <option>Gray</option>
+            <option>White</option>
+        </select>
+    </div>
+
+    <h2>Boys Collection</h2>
+    <div class="products">
+        <!-- Product Example -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1602810315126-7b23f0d2aa3e?auto=format&fit=crop&w=400&q=80" alt="Boys T-shirt">
+            <h3>Casual T-shirt</h3>
+            <p>Price: $15</p>
+            <p>Size: 
+                <select>
+                    <option>S</option><option>M</option><option>L</option><option>XL</option>
+                </select>
+            </p>
+            <p>Color: 
+                <select>
+                    <option>Red</option><option>Blue</option><option>Green</option><option>Black</option>
+                </select>
+            </p>
+            <div class="review">★★★★☆ (25 reviews)</div>
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1589820296153-98bde2a77490?auto=format&fit=crop&w=400&q=80" alt="Boys Jacket">
+            <h3>Denim Jacket</h3>
+            <p>Price: $35</p>
+            <p>Size: 
+                <select>
+                    <option>S</option><option>M</option><option>L</option><option>XL</option>
+                </select>
+            </p>
+            <p>Color: 
+                <select>
+                    <option>Blue</option><option>Black</option><option>Gray</option>
+                </select>
+            </p>
+            <div class="review">★★★★★ (40 reviews)</div>
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+        </div>
+        <!-- Repeat similar product cards for remaining 4 boys products -->
+
+    </div>
+
+    <h2>Girls Collection</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1600180758895-9b3b0f7e97f7?auto=format&fit=crop&w=400&q=80" alt="Girls Dress">
+            <h3>Summer Dress</h3>
+            <p>Price: $25</p>
+            <p>Size: 
+                <select>
+                    <option>S</option><option>M</option><option>L</option><option>XL</option>
+                </select>
+            </p>
+            <p>Color: 
+                <select>
+                    <option>Pink</option><option>White</option><option>Yellow</option>
+                </select>
+            </p>
+            <div class="review">★★★★☆ (30 reviews)</div>
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1562158070-3e2c0452c72b?auto=format&fit=crop&w=400&q=80" alt="Girls Top">
+            <h3>Floral Top</h3>
+            <p>Price: $18</p>
+            <p>Size: 
+                <select>
+                    <option>S</option><option>M</option><option>L</option><option>XL</option>
+                </select>
+            </p>
+            <p>Color: 
+                <select>
+                    <option>Red</option><option>Blue</option><option>Purple</option>
+                </select>
+            </p>
+            <div class="review">★★★★★ (50 reviews)</div>
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+        </div>
+        <!-- Repeat similar product cards for remaining 4 girls products -->
+    </div>
 </div>
-
-<section class="products">
-
-<!-- Product 1 -->
-<div class="product">
-<img src="images/boys-shirt.jpg" alt="Boys Shirt">
-<h3>Classic Boys Shirt</h3>
-<p>$25</p>
-<label>Size:
-<select id="size1">
-<option value="S">S</option>
-<option value="M" selected>M</option>
-<option value="L">L</option>
-<option value="XL">XL</option>
-</select></label>
-<label>Color:
-<select id="color1">
-<option value="Red">Red</option>
-<option value="Blue" selected>Blue</option>
-<option value="Black">Black</option>
-</select></label>
-<button class="add-cart" onclick="addToCart('Classic Boys Shirt',25,'size1','color1')">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Classic Boys Shirt',25,'size1','color1')">Buy Now</button>
-</div>
-
-<!-- Product 2 -->
-<div class="product">
-<img src="images/boys-pant.jpg" alt="Boys Pant">
-<h3>Denim Boys Pant</h3>
-<p>$35</p>
-<label>Size:
-<select id="size2">
-<option value="28">28</option>
-<option value="30" selected>30</option>
-<option value="32">32</option>
-<option value="34">34</option>
-</select></label>
-<label>Color:
-<select id="color2">
-<option value="Blue" selected>Blue</option>
-<option value="Black">Black</option>
-</select></label>
-<button class="add-cart" onclick="addToCart('Denim Boys Pant',35,'size2','color2')">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Denim Boys Pant',35,'size2','color2')">Buy Now</button>
-</div>
-
-<!-- Product 3 -->
-<div class="product">
-<img src="images/girls-shirt.jpg" alt="Girls Shirt">
-<h3>Girls Casual Shirt</h3>
-<p>$28</p>
-<label>Size:
-<select id="size3">
-<option value="S">S</option>
-<option value="M" selected>M</option>
-<option value="L">L</option>
-</select></label>
-<label>Color:
-<select id="color3">
-<option value="Pink" selected>Pink</option>
-<option value="White">White</option>
-<option value="Blue">Blue</option>
-</select></label>
-<button class="add-cart" onclick="addToCart('Girls Casual Shirt',28,'size3','color3')">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Girls Casual Shirt',28,'size3','color3')">Buy Now</button>
-</div>
-
-<!-- Product 4 -->
-<div class="product">
-<img src="images/girls-skirt.jpg" alt="Girls Skirt">
-<h3>Girls Trendy Skirt</h3>
-<p>$32</p>
-<label>Size:
-<select id="size4">
-<option value="S">S</option>
-<option value="M" selected>M</option>
-<option value="L">L</option>
-</select></label>
-<label>Color:
-<select id="color4">
-<option value="Red">Red</option>
-<option value="Black" selected>Black</option>
-<option value="Blue">Blue</option>
-</select></label>
-<button class="add-cart" onclick="addToCart('Girls Trendy Skirt',32,'size4','color4')">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Girls Trendy Skirt',32,'size4','color4')">Buy Now</button>
-</div>
-
-<!-- Product 5 -->
-<div class="product">
-<img src="images/unisex-tshirt.jpg" alt="Unisex T-shirt">
-<h3>Unisex T-Shirt</h3>
-<p>$20</p>
-<label>Size:
-<select id="size5">
-<option value="S">S</option>
-<option value="M" selected>M</option>
-<option value="L">L</option>
-</select></label>
-<label>Color:
-<select id="color5">
-<option value="White">White</option>
-<option value="Black" selected>Black</option>
-<option value="Gray">Gray</option>
-</select></label>
-<button class="add-cart" onclick="addToCart('Unisex T-Shirt',20,'size5','color5')">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Unisex T-Shirt',20,'size5','color5')">Buy Now</button>
-</div>
-
-<!-- Product 6 -->
-<div class="product">
-<img src="images/shorts.jpg" alt="Shorts">
-<h3>Summer Shorts</h3>
-<p>$22</p>
-<label>Size:
-<select id="size6">
-<option value="S">S</option>
-<option value="M" selected>M</option>
-<option value="L">L</option>
-</select></label>
-<label>Color:
-<select id="color6">
-<option value="Blue" selected>Blue</option>
-<option value="Black">Black</option>
-<option value="Gray">Gray</option>
-</select></label>
-<button class="add-cart" onclick="addToCart('Summer Shorts',22,'size6','color6')">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Summer Shorts',22,'size6','color6')">Buy Now</button>
-</div>
-
-</section>
-
-<section class="location">
-<h2>Our Store Location</h2>
-<p>Trendify Store, Butwal, Nepal</p>
-<p>Open: 10AM - 8PM, Mon-Sat</p>
-<p>We deliver <strong>all over Nepal</strong></p>
-</section>
 
 <footer>
-<p>&copy; 2026 Trendify Clothing Store | Contact: +977 9800000000</p>
+    &copy; 2026 Trendy Fashion Store | Delivery all over Nepal | Butwal, Nepal
 </footer>
-
-<script>
-function addToCart(name, price, sizeId, colorId){
-  const size = document.getElementById(sizeId).value;
-  const color = document.getElementById(colorId).value;
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart.push({name:name, price:price, size:size, color:color});
-  localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`${name} (Size: ${size}, Color: ${color}) added to cart!`);
-}
-
-function buyNow(name, price, sizeId, colorId){
-  const size = document.getElementById(sizeId).value;
-  const color = document.getElementById(colorId).value;
-  alert(`Buying ${name} (Size: ${size}, Color: ${color}) for $${price}. Redirecting to payment or WhatsApp...`);
-  // Example: redirect to WhatsApp for orders
-  // window.location.href = `https://wa.me/9779800000000?text=I want to buy ${name} Size:${size} Color:${color}`;
-}
-</script>
-
 </body>
 </html>

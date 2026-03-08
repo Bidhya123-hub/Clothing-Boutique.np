@@ -3,107 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ElegantWear Girls Fashion - Product Page</title>
-
+<title>Trendy Fashion Store</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;}
-header{background:#111;color:white;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;}
-.logo{font-size:24px;font-weight:bold;color:#ff4d88;}
-nav a{color:white;text-decoration:none;margin:0 15px;}
-nav a:hover{color:#ff77aa;}
-.cart{background:#ff4d88;padding:5px 15px;border-radius:20px;}
-.container{max-width:1200px;margin:20px auto;padding:0 20px;}
-.product-page{display:flex;flex-wrap:wrap;gap:30px;}
-.product-image{flex:1;min-width:300px;}
-.product-image img{width:100%;border-radius:10px;transition:transform 0.3s;}
-.product-image img:hover{transform:scale(1.05);}
-.product-details{flex:1;min-width:300px;}
-.product-details h1{font-size:28px;margin-bottom:10px;}
-.price{color:#ff4d88;font-size:24px;font-weight:bold;margin-bottom:15px;}
-button.add-cart{background:#ff4d88;color:white;padding:12px 25px;border:none;border-radius:5px;font-size:16px;cursor:pointer;margin-bottom:20px;}
-button.add-cart:hover{background:#ff77aa;}
-.section{margin-top:40px;}
-.section h2{font-size:22px;margin-bottom:15px;color:#111;}
-.reviews,.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.review,.tip{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
-footer{background:#111;color:white;text-align:center;padding:20px;margin-top:40px;}
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: #f5f5f5;
+  }
+  header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 2em; }
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+  }
+  nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover { background: #555; }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  .product {
+    background: #fff;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    position: relative;
+  }
+  .product:hover { transform: scale(1.05); }
+  .product img {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .product h3 { margin: 10px 0 5px; font-size: 1.2em; }
+  .price { color: #e91e63; font-weight: bold; margin-bottom: 5px; }
+  .review { color: #ff9800; margin-bottom: 5px; }
+  .btn {
+    display: inline-block;
+    background: #00bcd4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn:hover { background: #0097a7; }
+  .boys { border-top: 3px solid #2196f3; }
+  .girls { border-top: 3px solid #e91e63; }
+  .details { font-size: 0.9em; color: #555; margin-top: 5px; }
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">ElegantWear</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Reviews</a>
-<a href="#">Contact</a>
-</nav>
-<div class="cart">Cart: <span id="cart">0</span></div>
+  <h1>Trendy Fashion Store</h1>
 </header>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Shop</a>
+  <a href="#">Boys</a>
+  <a href="#">Girls</a>
+  <a href="#">Contact</a>
+</nav>
 
 <div class="container">
-<div class="product-page">
 
-<!-- PRODUCT IMAGE -->
-<div class="product-image">
-<img src="https://i.ibb.co/xY2M4yV/onepiece1.jpg" alt="Floral One-Piece Dress">
+  <!-- Boys Outfit 1 -->
+  <div class="product boys">
+    <img src="https://images.unsplash.com/photo-1593032465177-c35ecdb776f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Ym95cyBzaGlydHxlbnwwfHx8fDE2Nzg0NjMwNzU&ixlib=rb-4.0.3&q=80&w=400" alt="Boys Shirt">
+    <h3>Casual Boys Shirt</h3>
+    <div class="price">$25</div>
+    <div class="review">★★★★☆</div>
+    <div class="details">Perfect for school & casual outings. Pair with jeans or shorts.</div>
+    <button class="btn" onclick="addCart('Casual Boys Shirt')">Add to Cart</button>
+  </div>
+
+  <!-- Girls Outfit 1 -->
+  <div class="product girls">
+    <img src="https://images.unsplash.com/photo-1580414057773-5669e5857b5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Onepiece">
+    <h3>Floral One-Piece</h3>
+    <div class="price">$30</div>
+    <div class="review">★★★★★</div>
+    <div class="details">Light and trendy for summer events. Matches with sandals or heels.</div>
+    <button class="btn" onclick="addCart('Floral One-Piece')">Add to Cart</button>
+  </div>
+
+  <!-- Boys Outfit 2 -->
+  <div class="product boys">
+    <img src="https://images.unsplash.com/photo-1602810319225-b8b9a9d2d488?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Boys T-Shirt">
+    <h3>Graphic T-Shirt</h3>
+    <div class="price">$20</div>
+    <div class="review">★★★☆☆</div>
+    <div class="details">Comfortable cotton T-shirt with trendy print. Great for daily wear.</div>
+    <button class="btn" onclick="addCart('Graphic T-Shirt')">Add to Cart</button>
+  </div>
+
+  <!-- Girls Outfit 2 -->
+  <div class="product girls">
+    <img src="https://images.unsplash.com/photo-1600185365721-7f1619f06160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Skirt">
+    <h3>Trendy Skirt</h3>
+    <div class="price">$22</div>
+    <div class="review">★★★★☆</div>
+    <div class="details">Stylish mini skirt. Pair with crop tops or casual tees.</div>
+    <button class="btn" onclick="addCart('Trendy Skirt')">Add to Cart</button>
+  </div>
+
+  <!-- Boys Outfit 3 -->
+  <div class="product boys">
+    <img src="https://images.unsplash.com/photo-1618354696402-9d3747f7d79b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Boys Jeans">
+    <h3>Slim Fit Jeans</h3>
+    <div class="price">$28</div>
+    <div class="review">★★★★☆</div>
+    <div class="details">Durable jeans for everyday adventures. Matches T-shirts or shirts.</div>
+    <button class="btn" onclick="addCart('Slim Fit Jeans')">Add to Cart</button>
+  </div>
+
+  <!-- Girls Outfit 3 -->
+  <div class="product girls">
+    <img src="https://images.unsplash.com/photo-1593032465110-45d4e0a6d7b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Heels">
+    <h3>Stylish Heels</h3>
+    <div class="price">$35</div>
+    <div class="review">★★★★★</div>
+    <div class="details">Comfortable block heels for parties or casual events.</div>
+    <button class="btn" onclick="addCart('Stylish Heels')">Add to Cart</button>
+  </div>
+
+  <!-- Boys Outfit 4 -->
+  <div class="product boys">
+    <img src="https://images.unsplash.com/photo-1593032465171-f12c6b7f3622?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Boys Shoes">
+    <h3>Sporty Sneakers</h3>
+    <div class="price">$40</div>
+    <div class="review">★★★★☆</div>
+    <div class="details">Lightweight sneakers for sports or casual outings.</div>
+    <button class="btn" onclick="addCart('Sporty Sneakers')">Add to Cart</button>
+  </div>
+
+  <!-- Girls Outfit 4 -->
+  <div class="product girls">
+    <img src="https://images.unsplash.com/photo-1600185365722-7c99f9f06160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Top">
+    <h3>Casual Top</h3>
+    <div class="price">$18</div>
+    <div class="review">★★★☆☆</div>
+    <div class="details">Comfortable & stylish top, perfect for summer day out.</div>
+    <button class="btn" onclick="addCart('Casual Top')">Add to Cart</button>
+  </div>
+
 </div>
 
-<!-- PRODUCT DETAILS -->
-<div class="product-details">
-<h1>Floral One-Piece Dress</h1>
-<p class="price">$49.99</p>
-<p><strong>Product Details:</strong> A beautiful floral one-piece dress made from soft cotton fabric, perfect for summer outings, parties, or casual wear. Elegant design with a comfortable fit.</p>
-<p><strong>Available Sizes:</strong> XS, S, M, L</p>
-<p><strong>Colors:</strong> Pink, Blue, White</p>
-<button class="add-cart" onclick="addCart()">Add to Cart</button>
-</div>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp">💬</a>
 
-</div>
-
-<!-- STYLING TIPS -->
-<div class="section">
-<h2>Styling Tips</h2>
-<div class="tips">
-<div class="tip"><b>Casual Summer Look</b><p>Pair with cute sandals and a sun hat.</p></div>
-<div class="tip"><b>Party Outfit</b><p>Wear with chic heels and a small clutch bag.</p></div>
-<div class="tip"><b>Layered Style</b><p>Add a light cardigan for evening outings.</p></div>
-</div>
-</div>
-
-<!-- CUSTOMER REVIEWS -->
-<div class="section">
-<h2>Customer Reviews</h2>
-<div class="reviews">
-<div class="review">⭐️⭐️⭐️⭐️⭐️ "Loved the dress! Perfect fit and super comfy." - Anna</div>
-<div class="review">⭐️⭐️⭐️⭐️ "Beautiful colors and fabric. My daughter adored it!" - Mia</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ "Highly recommend for parties or casual outings." - Sophia</div>
-</div>
-</div>
-
-<!-- ADDITIONAL PRODUCT DETAILS -->
-<div class="section">
-<h2>Product Information</h2>
-<ul>
-<li>Material: 100% Cotton</li>
-<li>Wash Care: Machine wash cold, tumble dry low</li>
-<li>Made in: Nepal</li>
-<li>Perfect for summer, casual outings, and parties</li>
-</ul>
-</div>
-
-</div>
-
-<footer>
-<p>© 2026 ElegantWear Girls Fashion</p>
+<footer style="text-align:center; padding:20px; background:#333; color:white;">
+  &copy; 2026 Trendy Fashion Store. All Rights Reserved.
 </footer>
 
 <script>
-let cart=0;
-function addCart(){
-  cart++;
-  document.getElementById("cart").innerText=cart;
+function addCart(item){
+  alert(item + " has been added to your cart!");
 }
 </script>
 

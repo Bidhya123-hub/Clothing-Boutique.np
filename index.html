@@ -3,72 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trendify Clothing Store</title>
+<title>Trendify Store</title>
 <style>
-/* --- Reset & Basic --- */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; background:#f8f8f8; }
-
-/* --- Header --- */
-header {
-  background:#222; color:white; padding:15px 30px;
-  display:flex; justify-content:space-between; align-items:center;
-}
-header .logo { font-size:28px; color:#ff4d6d; font-weight:bold; }
-header nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
-header nav a:hover { color:#ffb347; }
-
-/* --- Banner --- */
-.banner {
-  background:url('https://images.unsplash.com/photo-1618354695035-fbaf86d93c85') center/cover no-repeat;
-  height:300px; display:flex; align-items:center; justify-content:center; color:white;
-  font-size:36px; font-weight:bold; text-shadow:2px 2px 5px rgba(0,0,0,0.7);
-}
-
-/* --- Products Section --- */
-.products {
-  padding:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-  gap:25px;
-}
-.product {
-  background:white; border-radius:10px; padding:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s; text-align:center;
-}
-.product:hover { transform:translateY(-8px); }
-.product img { width:100%; height:220px; object-fit:cover; border-radius:8px; }
-.product h3 { margin:12px 0 5px; font-size:18px; }
-.product p { margin:5px 0; font-weight:bold; color:#ff4d6d; }
-button { padding:10px 15px; margin:5px; border:none; border-radius:5px; cursor:pointer; }
-.add-cart { background:#ff4d6d; color:white; }
-.buy-now { background:#25D366; color:white; }
-
-/* --- Location Section --- */
-.location {
-  background:#fff; padding:30px; margin:40px; border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center;
-}
-.location h2 { margin-bottom:15px; }
-.location p { font-size:18px; color:#555; }
-
-/* --- Footer --- */
-footer {
-  background:#222; color:white; text-align:center; padding:20px; margin-top:40px;
-  font-size:14px;
-}
-
+body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4;}
+header{background:#222;color:white;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;}
+header .logo{font-size:28px;color:#ff4d6d;font-weight:bold;}
+header nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
+header nav a:hover{color:#ffb347;}
+.banner{background:url('https://images.unsplash.com/photo-1618354695035-fbaf86d93c85?crop=entropy&cs=tinysrgb&fit=max&w=1200') center/cover no-repeat;height:300px;display:flex;align-items:center;justify-content:center;color:white;font-size:36px;font-weight:bold;text-shadow:2px 2px 5px rgba(0,0,0,0.7);}
+.products{padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;}
+.product{background:white;border-radius:10px;padding:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;transition:0.3s;}
+.product:hover{transform:translateY(-8px);}
+.product img{width:100%;height:220px;object-fit:cover;border-radius:8px;}
+.product h3{margin:12px 0 5px;font-size:18px;}
+.product p{margin:5px 0;font-weight:bold;color:#ff4d6d;}
+button{padding:10px 15px;margin:5px;border:none;border-radius:5px;cursor:pointer;}
+.add-cart{background:#ff4d6d;color:white;}
+.buy-now{background:#25D366;color:white;}
+.location{background:#fff;padding:30px;margin:40px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;}
+.location h2{margin-bottom:15px;}
+.location p{font-size:18px;color:#555;}
+footer{background:#222;color:white;text-align:center;padding:20px;margin-top:40px;font-size:14px;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Trendify</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Boys</a>
-    <a href="#">Girls</a>
-    <a href="#">Contact</a>
-  </nav>
+<div class="logo">Trendify</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Boys</a>
+<a href="#">Girls</a>
+<a href="#">Contact</a>
+</nav>
 </header>
 
 <div class="banner">
@@ -76,61 +44,59 @@ Trending Fashion 2026
 </div>
 
 <section class="products">
-
 <!-- Product 1 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2" alt="Shirt">
+<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Boys Shirt">
 <h3>Classic Boys Shirt</h3>
 <p>$25</p>
-<button class="add-cart">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
+<button class="add-cart" onclick="addToCart('Classic Boys Shirt',25)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow('Classic Boys Shirt',25)">Buy Now</button>
 </div>
 
 <!-- Product 2 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1" alt="Pant">
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Boys Pant">
 <h3>Denim Boys Pant</h3>
 <p>$35</p>
-<button class="add-cart">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
+<button class="add-cart" onclick="addToCart('Denim Boys Pant',35)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow('Denim Boys Pant',35)">Buy Now</button>
 </div>
 
 <!-- Product 3 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Shirt">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Girls Shirt">
 <h3>Girls Casual Shirt</h3>
 <p>$28</p>
-<button class="add-cart">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
+<button class="add-cart" onclick="addToCart('Girls Casual Shirt',28)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow('Girls Casual Shirt',28)">Buy Now</button>
 </div>
 
 <!-- Product 4 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Skirt">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Girls Skirt">
 <h3>Girls Trendy Skirt</h3>
 <p>$32</p>
-<button class="add-cart">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
+<button class="add-cart" onclick="addToCart('Girls Trendy Skirt',32)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow('Girls Trendy Skirt',32)">Buy Now</button>
 </div>
 
 <!-- Product 5 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4" alt="T-shirt">
+<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Unisex T-shirt">
 <h3>Unisex T-Shirt</h3>
 <p>$20</p>
-<button class="add-cart">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
+<button class="add-cart" onclick="addToCart('Unisex T-Shirt',20)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow('Unisex T-Shirt',20)">Buy Now</button>
 </div>
 
 <!-- Product 6 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96" alt="Shorts">
+<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Shorts">
 <h3>Summer Shorts</h3>
 <p>$22</p>
-<button class="add-cart">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
+<button class="add-cart" onclick="addToCart('Summer Shorts',22)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow('Summer Shorts',22)">Buy Now</button>
 </div>
-
 </section>
 
 <section class="location">
@@ -142,6 +108,21 @@ Trending Fashion 2026
 <footer>
 <p>&copy; 2026 Trendify Clothing Store | Contact: +977 9800000000</p>
 </footer>
+
+<script>
+function addToCart(name, price){
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push({name:name, price:price});
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(name + " added to cart!");
+}
+
+function buyNow(name, price){
+  alert("Buying " + name + " for $" + price + ". Redirecting to payment...");
+  // Here you can redirect to payment page or WhatsApp link
+  // window.location.href = "https://wa.me/9779800000000?text=I want to buy "+name;
+}
+</script>
 
 </body>
 </html>

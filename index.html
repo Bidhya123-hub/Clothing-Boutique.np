@@ -1,196 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trendy Kids Fashion Store</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background: #f8f8f8;
-  }
-  header {
-    background: #222;
-    color: #fff;
-    padding: 18px 0;
-    text-align: center;
-  }
-  header h1 { margin: 0; font-size: 2em; }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #444;
-  }
-  nav a {
-    color: white;
-    padding: 15px 22px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav a:hover { background: #555; }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 22px auto;
-    max-width: 1200px;
-  }
-  .product {
-    background: #fff;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 12px;
-    width: 260px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-  }
-  .product:hover { transform: scale(1.04); }
-  .product img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  .product h3 { margin: 8px 0 4px; font-size: 1.2em; }
-  .price { color: #e91e63; font-weight: bold; margin-bottom: 6px; }
-  .review { color: #ff9800; margin-bottom: 6px; }
-  .btn {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .btn:hover { background: #0056b3; }
-  .boys { border-top: 3px solid #2196f3; }
-  .girls { border-top: 3px solid #e91e63; }
-  .details { font-size: 0.9em; color: #444; margin-top: 5px; }
-  .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 22px;
-    background: #25D366;
-    color: white;
-    padding: 16px;
-    border-radius: 50%;
-    font-size: 24px;
-    text-decoration: none;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys & Girls Fashion</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        h2 {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #222;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            margin: 8px 0;
+        }
+
+        .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .cart {
+            background: #ff9800;
+            color: #fff;
+        }
+
+        .buy {
+            background: #4caf50;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media(max-width: 500px){
+            .btns {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Fashion Store</h1>
+        <p>Boys & Girls Clothing Collection</p>
+    </header>
 
-<header>
-  <h1>Trendy Kids Fashion Store</h1>
-</header>
+    <h2>BOYS COLLECTION</h2>
+    <div class="grid-container">
+        <div class="card">
+            <img src="images/boy1.jpg" alt="Boy Item 1">
+            <h3>Boy Item 1</h3>
+            <p class="price">$19.99</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/boy2.jpg" alt="Boy Item 2">
+            <h3>Boy Item 2</h3>
+            <p class="price">$22.99</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/boy3.jpg" alt="Boy Item 3">
+            <h3>Boy Item 3</h3>
+            <p class="price">$18.99</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/boy4.jpg" alt="Boy Item 4">
+            <h3>Boy Item 4</h3>
+            <p class="price">$24.50</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/boy5.jpg" alt="Boy Item 5">
+            <h3>Boy Item 5</h3>
+            <p class="price">$15.00</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/boy6.jpg" alt="Boy Item 6">
+            <h3>Boy Item 6</h3>
+            <p class="price">$29.99</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+    </div>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Shop</a>
-  <a href="#">Boys</a>
-  <a href="#">Girls</a>
-  <a href="#">Contact</a>
-</nav>
+    <h2>GIRLS COLLECTION</h2>
+    <div class="grid-container">
+        <div class="card">
+            <img src="images/girl1.jpg" alt="Girl Item 1">
+            <h3>Girl Item 1</h3>
+            <p class="price">$20.99</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/girl2.jpg" alt="Girl Item 2">
+            <h3>Girl Item 2</h3>
+            <p class="price">$23.49</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/girl3.jpg" alt="Girl Item 3">
+            <h3>Girl Item 3</h3>
+            <p class="price">$17.99</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/girl4.jpg" alt="Girl Item 4">
+            <h3>Girl Item 4</h3>
+            <p class="price">$25.00</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/girl5.jpg" alt="Girl Item 5">
+            <h3>Girl Item 5</h3>
+            <p class="price">$27.50</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/girl6.jpg" alt="Girl Item 6">
+            <h3>Girl Item 6</h3>
+            <p class="price">$19.90</p>
+            <div class="btns">
+                <button class="cart">Add to Cart</button>
+                <button class="buy">Buy Now</button>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
-
-  <!-- Boys Outfit 1 -->
-  <div class="product boys">
-    <img src="https://cdn.pixabay.com/photo/2017/08/10/07/38/kids-2618489_1280.jpg" alt="Boys Shirt">
-    <h3>Trend Boys Shirt</h3>
-    <div class="price">$24.99</div>
-    <div class="review">★★★★☆</div>
-    <div class="details">Cool casual shirt for boys.</div>
-    <button class="btn" onclick="addCart('Trend Boys Shirt')">Add to Cart</button>
-  </div>
-
-  <!-- Girls Outfit 1 -->
-  <div class="product girls">
-    <img src="https://cdn.pixabay.com/photo/2015/03/26/10/03/kids-690036_1280.jpg" alt="Girls Dress">
-    <h3>Summer Girl Dress</h3>
-    <div class="price">$29.50</div>
-    <div class="review">★★★★★</div>
-    <div class="details">Beautiful summer dress for girls.</div>
-    <button class="btn" onclick="addCart('Summer Girl Dress')">Add to Cart</button>
-  </div>
-
-  <!-- Boys Outfit 2 -->
-  <div class="product boys">
-    <img src="https://cdn.pixabay.com/photo/2019/12/27/22/57/boy-4720116_1280.jpg" alt="Boys Graphic Tshirt">
-    <h3>Graphic Tee for Boys</h3>
-    <div class="price">$19.99</div>
-    <div class="review">★★★☆☆</div>
-    <div class="details">Comfy printed T‑shirt for boys.</div>
-    <button class="btn" onclick="addCart('Graphic Tee for Boys')">Add to Cart</button>
-  </div>
-
-  <!-- Girls Outfit 2 -->
-  <div class="product girls">
-    <img src="https://cdn.pixabay.com/photo/2016/11/14/04/08/children-1822701_1280.jpg" alt="Girls Outfit">
-    <h3>Stylish Girls Set</h3>
-    <div class="price">$26.75</div>
-    <div class="review">★★★★☆</div>
-    <div class="details">Girls fashion set with top & skirt.</div>
-    <button class="btn" onclick="addCart('Stylish Girls Set')">Add to Cart</button>
-  </div>
-
-  <!-- Boys Outfit 3 -->
-  <div class="product boys">
-    <img src="https://cdn.pixabay.com/photo/2018/08/08/15/48/boy-3590723_1280.jpg" alt="Boys Denim">
-    <h3>Boys Denim Jeans</h3>
-    <div class="price">$28.00</div>
-    <div class="review">★★★★☆</div>
-    <div class="details">Stretchy denim jeans for daily use.</div>
-    <button class="btn" onclick="addCart('Boys Denim Jeans')">Add to Cart</button>
-  </div>
-
-  <!-- Girls Outfit 3 -->
-  <div class="product girls">
-    <img src="https://cdn.pixabay.com/photo/2015/09/02/13/29/children-918992_1280.jpg" alt="Girls Shoes">
-    <h3>Girls Casual Shoes</h3>
-    <div class="price">$34.99</div>
-    <div class="review">★★★★★</div>
-    <div class="details">Comfort shoes for girls outings.</div>
-    <button class="btn" onclick="addCart('Girls Casual Shoes')">Add to Cart</button>
-  </div>
-
-  <!-- Boys Outfit 4 -->
-  <div class="product boys">
-    <img src="https://cdn.pixabay.com/photo/2019/11/04/09/03/brothers-4593370_1280.jpg" alt="Boys Hooded Jacket">
-    <h3>Boys Hooded Jacket</h3>
-    <div class="price">$39.99</div>
-    <div class="review">★★★★☆</div>
-    <div class="details">Warm jacket for boys.</div>
-    <button class="btn" onclick="addCart('Boys Hooded Jacket')">Add to Cart</button>
-  </div>
-
-  <!-- Girls Outfit 4 -->
-  <div class="product girls">
-    <img src="https://cdn.pixabay.com/photo/2018/01/12/11/30/child-3082110_1280.jpg" alt="Girls Top">
-    <h3>Girls Stylish Top</h3>
-    <div class="price">$18.50</div>
-    <div class="review">★★★☆☆</div>
-    <div class="details">Trendy and comfy top for girls.</div>
-    <button class="btn" onclick="addCart('Girls Stylish Top')">Add to Cart</button>
-  </div>
-
-</div>
-
-<a href="https://wa.me/1234567890" target="_blank" class="whatsapp">💬</a>
-
-<footer style="text-align:center; padding:18px; background:#222; color:white;">
-  &copy; 2026 Trendy Kids Fashion Store
-</footer>
-
-<script>
-function addCart(item){
-  alert("🛒 " + item + " added to cart!");
-}
-</script>
-
+    <footer>
+        &copy; 2026 Fashion Store
+    </footer>
 </body>
 </html>

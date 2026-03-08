@@ -90,7 +90,33 @@ nav a:hover{
     text-align:center;
     font-weight:bold;
     color:#333;
+    margin-bottom:5px;
+}
+.details{
+    text-align:center;
     margin-bottom:10px;
+}
+.color-options span{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    margin:0 5px;
+    cursor:pointer;
+    border:1px solid #ccc;
+}
+.size-options button{
+    margin:3px;
+    padding:5px 8px;
+    border:1px solid #333;
+    border-radius:5px;
+    cursor:pointer;
+    background:white;
+    transition:0.2s;
+}
+.size-options button.selected{
+    background:#333;
+    color:white;
 }
 .button-container{
     display:flex;
@@ -98,7 +124,7 @@ nav a:hover{
     gap:10px;
     margin-bottom:15px;
 }
-button{
+button.add-cart, button.buy-now{
     padding:10px 15px;
     border:none;
     border-radius:5px;
@@ -106,18 +132,18 @@ button{
     font-weight:bold;
     transition:0.3s;
 }
-.add-cart{
+button.add-cart{
     background:#ff9800;
     color:white;
 }
-.add-cart:hover{
+button.add-cart:hover{
     background:#e68900;
 }
-.buy-now{
+button.buy-now{
     background:#4caf50;
     color:white;
 }
-.buy-now:hover{
+button.buy-now:hover{
     background:#449d48;
 }
 
@@ -158,7 +184,7 @@ button{
 }
 .cart-items li{
     display:flex;
-    justify-content:space-between;
+    flex-direction:column;
     margin-bottom:10px;
     border-bottom:1px solid #ddd;
     padding-bottom:5px;
@@ -235,68 +261,26 @@ footer{
 <h2 class="section-title">Girls Trending Dresses</h2>
 <div class="gallery">
 
-<div class="card">
+<div class="card" data-name="Elegant Party Dress" data-price="3500">
 <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
 <h3>Elegant Party Dress</h3>
 <div class="price">Rs 3,500</div>
+<div class="details">
+<div class="color-options">
+<span style="background:red" onclick="selectColor(this)"></span>
+<span style="background:blue" onclick="selectColor(this)"></span>
+<span style="background:yellow" onclick="selectColor(this)"></span>
+</div>
+<div class="size-options">
+<button onclick="selectSize(this)">S</button>
+<button onclick="selectSize(this)">M</button>
+<button onclick="selectSize(this)">L</button>
+<button onclick="selectSize(this)">XL</button>
+</div>
+</div>
 <div class="button-container">
-<button class="add-cart" onclick="addToCart('Elegant Party Dress', 3500)">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Elegant Party Dress', 3500)">Buy Now</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
-<h3>Floral Summer Dress</h3>
-<div class="price">Rs 2,800</div>
-<div class="button-container">
-<button class="add-cart" onclick="addToCart('Floral Summer Dress', 2800)">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Floral Summer Dress', 2800)">Buy Now</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
-<h3>Modern Street Fashion</h3>
-<div class="price">Rs 3,200</div>
-<div class="button-container">
-<button class="add-cart" onclick="addToCart('Modern Street Fashion', 3200)">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Modern Street Fashion', 3200)">Buy Now</button>
-</div>
-</div>
-
-</div>
-
-<h2 class="section-title">Boys Trending Dresses</h2>
-<div class="gallery">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-<h3>Casual Street Style</h3>
-<div class="price">Rs 3,000</div>
-<div class="button-container">
-<button class="add-cart" onclick="addToCart('Casual Street Style', 3000)">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Casual Street Style', 3000)">Buy Now</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-<h3>Modern Suit Fashion</h3>
-<div class="price">Rs 4,500</div>
-<div class="button-container">
-<button class="add-cart" onclick="addToCart('Modern Suit Fashion', 4500)">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Modern Suit Fashion', 4500)">Buy Now</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d">
-<h3>Summer Casual Look</h3>
-<div class="price">Rs 2,900</div>
-<div class="button-container">
-<button class="add-cart" onclick="addToCart('Summer Casual Look', 2900)">Add to Cart</button>
-<button class="buy-now" onclick="buyNow('Summer Casual Look', 2900)">Buy Now</button>
+<button class="add-cart" onclick="addToCart(this)">Add to Cart</button>
+<button class="buy-now" onclick="buyNow(this)">Buy Now</button>
 </div>
 </div>
 
@@ -335,60 +319,84 @@ allowfullscreen="" loading="lazy"></iframe>
 
 <script>
 let cart = [];
+let selectedColor = null;
+let selectedSize = null;
 
 function toggleCart(){
     document.getElementById('cart-sidebar').classList.toggle('active');
 }
 
-function addToCart(name, price){
-    const item = cart.find(i => i.name === name);
-    if(item){
-        item.quantity++;
+function selectColor(span){
+    const parent = span.closest('.card');
+    const colors = parent.querySelectorAll('.color-options span');
+    colors.forEach(c=>c.style.border='1px solid #ccc');
+    span.style.border='2px solid black';
+    selectedColor = span.style.background;
+}
+
+function selectSize(btn){
+    const parent = btn.closest('.card');
+    const sizes = parent.querySelectorAll('.size-options button');
+    sizes.forEach(s=>s.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedSize = btn.innerText;
+}
+
+function addToCart(button){
+    const card = button.closest('.card');
+    const name = card.dataset.name;
+    const price = parseInt(card.dataset.price);
+    const color = selectedColor || 'Default';
+    const size = selectedSize || 'M';
+    
+    const existing = cart.find(i=>i.name===name && i.color===color && i.size===size);
+    if(existing){
+        existing.quantity++;
     }else{
-        cart.push({name, price, quantity:1});
+        cart.push({name, price, color, size, quantity:1});
     }
     updateCart();
     toggleCart();
 }
 
-function removeFromCart(name){
-    cart = cart.filter(i => i.name !== name);
+function removeFromCart(name,color,size){
+    cart = cart.filter(i=>!(i.name===name && i.color===color && i.size===size));
     updateCart();
 }
 
 function updateCart(){
     const cartItems = document.getElementById('cart-items');
-    cartItems.innerHTML = '';
-    let total = 0;
+    cartItems.innerHTML='';
+    let total=0;
     cart.forEach(item=>{
-        total += item.price * item.quantity;
+        total += item.price*item.quantity;
         const li = document.createElement('li');
-        li.innerHTML = `${item.name} (Rs ${item.price}) x ${item.quantity} <span onclick="removeFromCart('${item.name}')" style="cursor:pointer;color:red;">✖</span>`;
+        li.innerHTML = `${item.name} - ${item.color} - ${item.size} x ${item.quantity} = Rs ${item.price*item.quantity} <span onclick="removeFromCart('${item.name}','${item.color}','${item.size}')" style="cursor:pointer;color:red;">✖</span>`;
         cartItems.appendChild(li);
     });
-    document.getElementById('cart-total').innerText = 'Total: Rs ' + total;
+    document.getElementById('cart-total').innerText = 'Total: Rs '+total;
 }
 
 function checkout(){
-    if(cart.length === 0){
-        alert('Your cart is empty!');
+    if(cart.length===0){
+        alert('Cart is empty!');
         return;
     }
     let message = 'Checkout Items:\n';
     cart.forEach(item=>{
-        message += `${item.name} x ${item.quantity} = Rs ${item.price * item.quantity}\n`;
+        message+=`${item.name} - ${item.color} - ${item.size} x ${item.quantity} = Rs ${item.price*item.quantity}\n`;
     });
     message += document.getElementById('cart-total').innerText;
-    alert(message + '\nRedirecting to payment page...');
-    cart = [];
+    alert(message+'\nRedirecting to payment page...');
+    cart=[];
     updateCart();
     toggleCart();
 }
 
-function buyNow(name, price){
-    alert(`Redirecting to checkout for ${name} (Rs ${price})`);
+function buyNow(button){
+    addToCart(button);
+    checkout();
 }
 </script>
-
 </body>
 </html>

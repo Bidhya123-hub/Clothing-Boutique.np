@@ -4,19 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HangerStyle Fashion</title>
+<title>ElegantWear Fashion</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
 body{
-background:#f5f5f5;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f4f4;
 }
 
 /* HEADER */
@@ -35,19 +30,14 @@ display:flex;
 align-items:center;
 gap:10px;
 font-size:22px;
-font-weight:bold;
 color:#ff4d88;
-}
-
-.logo svg{
-width:35px;
-height:35px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
-margin:0 15px;
 text-decoration:none;
+margin:0 12px;
 }
 
 nav a:hover{
@@ -64,7 +54,9 @@ border-radius:20px;
 
 .hero{
 height:60vh;
-background:url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d") center/cover;
+background-image:url("https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -73,7 +65,6 @@ text-align:center;
 }
 
 .hero h1{
-font-size:45px;
 background:rgba(0,0,0,0.5);
 padding:20px;
 border-radius:10px;
@@ -83,51 +74,37 @@ border-radius:10px;
 
 .products{
 padding:40px;
-}
-
-.products h2{
 text-align:center;
-margin-bottom:30px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+margin-top:30px;
 }
 
 .card{
 background:white;
 border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
 overflow:hidden;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .card img{
 width:100%;
-height:240px;
+height:220px;
 object-fit:cover;
-}
-
-.card h3{
-padding:10px;
 }
 
 .price{
 color:#ff4d88;
-padding-left:10px;
 font-weight:bold;
 }
 
 .card button{
 margin:10px;
 padding:10px;
-width:90%;
 border:none;
 background:#111;
 color:white;
@@ -139,35 +116,32 @@ cursor:pointer;
 background:#ff4d88;
 }
 
-/* NEW ARRIVALS */
+/* REVIEWS */
 
-.arrivals{
+.reviews{
 padding:40px;
+background:#eee;
+text-align:center;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.review{
 background:white;
+padding:20px;
+border-radius:10px;
 }
 
-.arrivals h2{
-text-align:center;
-margin-bottom:20px;
-}
-
-.arrivals p{
-text-align:center;
-max-width:700px;
-margin:auto;
-line-height:1.6;
-}
-
-/* STYLING TIPS */
+/* TIPS */
 
 .tips{
 padding:40px;
-background:#f0f0f0;
-}
-
-.tips h2{
 text-align:center;
-margin-bottom:20px;
 }
 
 .tip-grid{
@@ -181,31 +155,16 @@ margin-top:20px;
 background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* CONTACT */
+/* FOOTER */
 
-.contact{
-padding:40px;
-background:white;
-}
-
-.contact input, .contact textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-.contact button{
-background:#ff4d88;
+footer{
+background:#111;
 color:white;
-border:none;
-padding:12px;
-width:100%;
-border-radius:5px;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
 /* WHATSAPP */
@@ -219,16 +178,7 @@ color:white;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
-font-size:22px;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
+font-size:20px;
 }
 
 </style>
@@ -240,79 +190,106 @@ padding:20px;
 
 <div class="logo">
 
-<!-- HANGER + DRESS LOGO -->
-
-<svg viewBox="0 0 64 64" fill="#ff4d88">
-<path d="M32 6c-4 0-7 3-7 7 0 2 1 3 2 4l-16 9c-2 1-3 3-3 5v3h48v-3c0-2-1-4-3-5l-16-9c1-1 2-2 2-4 0-4-3-7-7-7zm0 4c2 0 3 1 3 3s-1 3-3 3-3-1-3-3 1-3 3-3z"/>
+<svg width="35" height="35" viewBox="0 0 64 64" fill="#ff4d88">
+<path d="M32 6c-4 0-7 3-7 7 0 2 1 3 2 4l-16 9c-2 1-3 3-3 5v3h48v-3c0-2-1-4-3-5l-16-9c1-1 2-2 2-4 0-4-3-7-7-7z"/>
 </svg>
 
-HangerStyle
+ElegantWear
 
 </div>
 
 <nav>
 <a href="#">Home</a>
 <a href="#">Shop</a>
-<a href="#">New Arrivals</a>
-<a href="#">Styling Tips</a>
+<a href="#">Reviews</a>
 <a href="#">Contact</a>
 </nav>
 
-<div class="cart">Cart: <span id="cart-count">0</span></div>
+<div class="cart">Cart: <span id="cart">0</span></div>
 
 </header>
 
 <section class="hero">
-<h1>Trendy Women Fashion Collection</h1>
+<h1>Modern Women Fashion</h1>
 </section>
 
 <section class="products">
 
-<h2>Popular Dresses</h2>
+<h2>Trending Clothes</h2>
 
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1520975922284-83c9c3e9d5ef">
+<img src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg">
 <h3>One Piece Dress</h3>
 <p class="price">$45</p>
-<button onclick="addToCart()">Add to Cart</button>
+<button onclick="addCart()">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae">
+<img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg">
 <h3>Women Pant</h3>
-<p class="price">$30</p>
-<button onclick="addToCart()">Add to Cart</button>
+<p class="price">$32</p>
+<button onclick="addCart()">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg">
 <h3>Fashion T-Shirt</h3>
 <p class="price">$20</p>
-<button onclick="addToCart()">Add to Cart</button>
+<button onclick="addCart()">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b">
+<img src="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg">
 <h3>Stylish Skirt</h3>
 <p class="price">$28</p>
-<button onclick="addToCart()">Add to Cart</button>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/6311605/pexels-photo-6311605.jpeg">
+<h3>Casual Top</h3>
+<p class="price">$22</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/6311640/pexels-photo-6311640.jpeg">
+<h3>Women Coat</h3>
+<p class="price">$60</p>
+<button onclick="addCart()">Add to Cart</button>
 </div>
 
 </div>
 
 </section>
 
-<section class="arrivals">
+<section class="reviews">
 
-<h2>New Arrivals</h2>
+<h2>Customer Reviews</h2>
 
-<p>
-Explore our newest fashion collection featuring trendy dresses, stylish pants,
-modern tops, and elegant outfits designed for every occasion.
-Stay ahead of fashion with our latest arrivals.
-</p>
+<div class="review-grid">
+
+<div class="review">
+⭐️⭐️⭐️⭐️⭐️  
+Beautiful dress and very comfortable.  
+<b>- Sarah</b>
+</div>
+
+<div class="review">
+⭐️⭐️⭐️⭐️  
+Very stylish clothes and good quality.  
+<b>- Emma</b>
+</div>
+
+<div class="review">
+⭐️⭐️⭐️⭐️⭐️  
+Fast delivery and excellent service.  
+<b>- Olivia</b>
+</div>
+
+</div>
 
 </section>
 
@@ -323,50 +300,39 @@ Stay ahead of fashion with our latest arrivals.
 <div class="tip-grid">
 
 <div class="tip">
-<b>Casual Look</b>
-<p>Pair a trendy t-shirt with high-waist jeans and sneakers.</p>
+<b>Casual Style</b>
+<p>T-shirt with jeans and sneakers.</p>
 </div>
 
 <div class="tip">
-<b>Party Style</b>
-<p>Choose a stylish one-piece dress with heels and accessories.</p>
+<b>Party Look</b>
+<p>One-piece dress with heels.</p>
 </div>
 
 <div class="tip">
-<b>Office Fashion</b>
-<p>Combine formal pants with a clean blouse and blazer.</p>
+<b>Office Wear</b>
+<p>Formal pants with blouse.</p>
 </div>
 
 </div>
-
-</section>
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Email">
-<textarea placeholder="Message"></textarea>
-
-<button>Send Message</button>
 
 </section>
 
 <a class="whatsapp" href="https://wa.me/9779800000000">W</a>
 
 <footer>
-<p>© 2026 HangerStyle Women Fashion Store</p>
+
+<p>© 2026 ElegantWear Fashion Store</p>
+
 </footer>
 
 <script>
 
-let cart = 0;
+let cart=0;
 
-function addToCart(){
+function addCart(){
 cart++;
-document.getElementById("cart-count").innerText = cart;
-alert("Product added to cart");
+document.getElementById("cart").innerText=cart;
 }
 
 </script>

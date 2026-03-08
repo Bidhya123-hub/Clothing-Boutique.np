@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Fashion Style Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanTrend Fashion Store</title>
 
 <style>
 
 body{
+font-family: Arial, sans-serif;
 margin:0;
-font-family:Arial;
-background:#f4f4f4;
+background:#f5f5f5;
 }
+
+/* Header */
 
 header{
 background:black;
@@ -22,170 +25,102 @@ padding:15px 40px;
 }
 
 .logo{
-font-size:28px;
+font-size:24px;
 font-weight:bold;
-color:gold;
-}
-
-.cart-icon{
-font-size:18px;
-}
-
-nav{
-background:#333;
-text-align:center;
-padding:12px;
+color:#ff4d6d;
 }
 
 nav a{
 color:white;
+margin:0 15px;
 text-decoration:none;
-margin:20px;
-font-size:18px;
+font-weight:bold;
 }
 
 nav a:hover{
-color:gold;
+color:#ff4d6d;
 }
 
-.container{
-width:90%;
-margin:auto;
-padding:30px;
-}
+/* Banner */
 
-.section-title{
-text-align:center;
-margin:40px 0;
-}
-
-/* GALLERY */
-
-.slider{
-position:relative;
-}
-
-.gallery{
+.banner{
+height:350px;
+background:url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b");
+background-size:cover;
+background-position:center;
 display:flex;
-overflow-x:auto;
-gap:20px;
-scroll-behavior:smooth;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:40px;
+font-weight:bold;
 }
 
-.card{
-min-width:280px;
+/* Products */
+
+.products{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.product{
 background:white;
+padding:15px;
 border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-padding-bottom:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
 }
 
-.card img{
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product img{
 width:100%;
-height:300px;
+height:220px;
 object-fit:cover;
+border-radius:8px;
 }
 
-.card h3{
-text-align:center;
-margin:10px;
-}
-
-.rating{
-text-align:center;
-color:gold;
+.product h3{
+margin:10px 0;
 }
 
 .price{
-text-align:center;
+color:#ff4d6d;
 font-weight:bold;
-font-size:18px;
 }
 
-.card p{
-text-align:center;
-}
-
-.size{
-display:block;
-margin:auto;
-padding:5px;
-}
-
-.button-container{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:10px;
-flex-wrap:wrap;
-}
+/* Buttons */
 
 button{
-padding:8px 12px;
 border:none;
+padding:10px 15px;
+margin:5px;
 border-radius:5px;
 cursor:pointer;
-font-weight:bold;
 }
 
-.add-cart{
-background:#ff9800;
+.cart{
+background:#ff4d6d;
 color:white;
 }
 
-.buy-now{
-background:#4caf50;
+.whatsapp{
+background:#25D366;
 color:white;
 }
 
-.wishlist{
-background:white;
-border:1px solid red;
-color:red;
-}
-
-.delivery{
-font-size:14px;
-color:green;
-}
-
-.slide-btn{
-position:absolute;
-top:40%;
-background:black;
-color:white;
-border:none;
-font-size:20px;
-padding:10px;
-cursor:pointer;
-}
-
-.prev{left:0;}
-.next{right:0;}
-
-.contact-section{
-background:white;
-margin-top:40px;
-padding:30px;
-text-align:center;
-border-radius:10px;
-}
-
-.map-container iframe{
-width:100%;
-max-width:600px;
-height:400px;
-border:0;
-border-radius:10px;
-margin-top:20px;
-}
+/* Footer */
 
 footer{
 background:black;
 color:white;
 text-align:center;
-padding:15px;
+padding:20px;
 margin-top:30px;
 }
 
@@ -195,206 +130,161 @@ margin-top:30px;
 <body>
 
 <header>
-
-<div class="logo">FASHION STYLE</div>
-
-<div class="cart-icon">
-🛒 Cart (<span id="cart-count">0</span>)
-</div>
-
-</header>
+<div class="logo">UrbanTrend</div>
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Boys Fashion</a>
-<a href="#">Girls Fashion</a>
+<a href="#">Shop</a>
+<a href="#">Boys</a>
+<a href="#">Girls</a>
 <a href="#">Contact</a>
 </nav>
+</header>
 
-<div class="container">
-
-<!-- BOYS SECTION -->
-
-<h2 class="section-title">Boys Fashion</h2>
-
-<div class="slider">
-
-<button class="slide-btn prev" onclick="slideLeft('boys')">❮</button>
-
-<div class="gallery" id="boys">
-
-<div class="card">
-<img src="https://source.unsplash.com/400x500/?men,fashion">
-<h3>Casual Street Style</h3>
-<p class="rating">⭐⭐⭐⭐☆</p>
-<p class="price">Rs 3000</p>
-<p><b>Color:</b> Black / Grey / Blue</p>
-<select class="size">
-<option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<p class="delivery">🚚 Delivery All Over Nepal (3-5 Days)</p>
-<div class="button-container">
-<button class="wishlist">❤️</button>
-<button class="add-cart" onclick="addToCart()">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
-</div>
+<div class="banner">
+New Trend Fashion
 </div>
 
-<div class="card">
-<img src="https://source.unsplash.com/400x500/?man,denim,jacket">
-<h3>Denim Jacket Style</h3>
-<p class="rating">⭐⭐⭐⭐⭐</p>
-<p class="price">Rs 4200</p>
-<p><b>Color:</b> Blue / Dark Blue</p>
-<select class="size">
-<option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<p class="delivery">🚚 Delivery All Over Nepal (3-5 Days)</p>
-<div class="button-container">
-<button class="wishlist">❤️</button>
-<button class="add-cart" onclick="addToCart()">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
-</div>
+<section class="products">
+
+<!-- 1 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<h3>Oversized T-Shirt</h3>
+<p class="price">$20</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="card">
-<img src="https://source.unsplash.com/400x500/?men,casual,shirt">
-<h3>Summer Casual Shirt</h3>
-<p class="rating">⭐⭐⭐⭐☆</p>
-<p class="price">Rs 2500</p>
-<p><b>Color:</b> White / Sky Blue</p>
-<select class="size">
-<option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<p class="delivery">🚚 Delivery All Over Nepal (3-5 Days)</p>
-<div class="button-container">
-<button class="wishlist">❤️</button>
-<button class="add-cart" onclick="addToCart()">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
-</div>
+<!-- 2 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2">
+<h3>Denim Jacket</h3>
+<p class="price">$45</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
+<!-- 3 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+<h3>Casual Shirt</h3>
+<p class="price">$30</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<button class="slide-btn next" onclick="slideRight('boys')">❯</button>
-
+<!-- 4 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+<h3>Black Pants</h3>
+<p class="price">$35</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<!-- GIRLS SECTION -->
-
-<h2 class="section-title">Girls Fashion</h2>
-
-<div class="slider">
-
-<button class="slide-btn prev" onclick="slideLeft('girls')">❮</button>
-
-<div class="gallery" id="girls">
-
-<div class="card">
-<img src="https://source.unsplash.com/400x500/?woman,party,dress">
-<h3>Elegant Party Dress</h3>
-<p class="rating">⭐⭐⭐⭐☆</p>
-<p class="price">Rs 3500</p>
-<p><b>Color:</b> Red / Black / Blue</p>
-<select class="size">
-<option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<p class="delivery">🚚 Delivery All Over Nepal (3-5 Days)</p>
-<div class="button-container">
-<button class="wishlist">❤️</button>
-<button class="add-cart" onclick="addToCart()">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
-</div>
+<!-- 5 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<h3>One Piece Dress</h3>
+<p class="price">$50</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="card">
-<img src="https://source.unsplash.com/400x500/?woman,floral,dress">
-<h3>Floral Summer Dress</h3>
-<p class="rating">⭐⭐⭐⭐⭐</p>
-<p class="price">Rs 2800</p>
-<p><b>Color:</b> Pink / Yellow / White</p>
-<select class="size">
-<option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<p class="delivery">🚚 Delivery All Over Nepal (3-5 Days)</p>
-<div class="button-container">
-<button class="wishlist">❤️</button>
-<button class="add-cart" onclick="addToCart()">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
-</div>
+<!-- 6 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4">
+<h3>Mini Skirt</h3>
+<p class="price">$28</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="card">
-<img src="https://source.unsplash.com/400x500/?women,fashion,dress">
-<h3>Modern Fashion Dress</h3>
-<p class="rating">⭐⭐⭐⭐☆</p>
-<p class="price">Rs 3200</p>
-<p><b>Color:</b> Purple / White</p>
-<select class="size">
-<option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<p class="delivery">🚚 Delivery All Over Nepal (3-5 Days)</p>
-<div class="button-container">
-<button class="wishlist">❤️</button>
-<button class="add-cart" onclick="addToCart()">Add to Cart</button>
-<button class="buy-now">Buy Now</button>
-</div>
+<!-- 7 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96">
+<h3>Summer Shorts</h3>
+<p class="price">$22</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
+<!-- 8 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520974735194-1c2bba7c0a52">
+<h3>Formal Coat</h3>
+<p class="price">$70</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<button class="slide-btn next" onclick="slideRight('girls')">❯</button>
-
+<!-- 9 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9">
+<h3>Graphic T-Shirt</h3>
+<p class="price">$18</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<!-- CONTACT -->
-
-<div class="contact-section">
-
-<h2>Contact Us</h2>
-
-<p>📍 Location: Butwal, Nepal</p>
-<p>📞 Phone: +977 9800000000</p>
-<p>📧 Email: fashionstyle@gmail.com</p>
-
-<div class="map-container">
-
-<iframe src="https://www.google.com/maps?q=Butwal,Nepal&output=embed"></iframe>
-
+<!-- 10 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<h3>Stylish Hoodie</h3>
+<p class="price">$40</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
+<!-- 11 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae">
+<h3>Girls Crop Top</h3>
+<p class="price">$25</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
+<!-- 12 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070">
+<h3>Denim Jeans</h3>
+<p class="price">$38</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
+
+</section>
 
 <footer>
-<p>© 2026 Fashion Style | All Rights Reserved</p>
+<p>UrbanTrend Fashion Store</p>
+<p>WhatsApp Order: +977 9800000000</p>
 </footer>
-
-<script>
-
-let cartCount=0;
-
-function addToCart(){
-cartCount++;
-document.getElementById("cart-count").innerText=cartCount;
-}
-
-function slideLeft(id){
-document.getElementById(id).scrollBy({
-left:-300,
-behavior:"smooth"
-});
-}
-
-function slideRight(id){
-document.getElementById(id).scrollBy({
-left:300,
-behavior:"smooth"
-});
-}
-
-</script>
 
 </body>
 </html>

@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trendy Fashion Store</title>
+<title>Trendy Kids Fashion Store</title>
 <style>
   body {
     font-family: Arial, sans-serif;
     margin: 0; padding: 0;
-    background: #f5f5f5;
+    background: #f8f8f8;
   }
   header {
-    background: #333;
+    background: #222;
     color: #fff;
-    padding: 20px;
+    padding: 18px 0;
     text-align: center;
   }
   header h1 { margin: 0; font-size: 2em; }
@@ -24,7 +24,7 @@
   }
   nav a {
     color: white;
-    padding: 15px 20px;
+    padding: 15px 22px;
     text-decoration: none;
     font-weight: bold;
   }
@@ -33,62 +33,63 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px auto;
+    margin: 22px auto;
     max-width: 1200px;
   }
   .product {
     background: #fff;
     margin: 10px;
     border-radius: 10px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 12px;
+    width: 260px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
-    position: relative;
   }
-  .product:hover { transform: scale(1.05); }
+  .product:hover { transform: scale(1.04); }
   .product img {
     width: 100%;
-    border-radius: 10px;
     height: 300px;
     object-fit: cover;
+    border-radius: 10px;
   }
-  .product h3 { margin: 10px 0 5px; font-size: 1.2em; }
-  .price { color: #e91e63; font-weight: bold; margin-bottom: 5px; }
-  .review { color: #ff9800; margin-bottom: 5px; }
+  .product h3 { margin: 8px 0 4px; font-size: 1.2em; }
+  .price { color: #e91e63; font-weight: bold; margin-bottom: 6px; }
+  .review { color: #ff9800; margin-bottom: 6px; }
   .btn {
     display: inline-block;
-    background: #00bcd4;
+    background: #007bff;
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
+    font-size: 0.95em;
   }
-  .btn:hover { background: #0097a7; }
+  .btn:hover { background: #0056b3; }
   .boys { border-top: 3px solid #2196f3; }
   .girls { border-top: 3px solid #e91e63; }
-  .details { font-size: 0.9em; color: #555; margin-top: 5px; }
+  .details { font-size: 0.9em; color: #444; margin-top: 5px; }
   .whatsapp {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 22px;
     background: #25D366;
     color: white;
-    padding: 15px;
+    padding: 16px;
     border-radius: 50%;
     font-size: 24px;
     text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Trendy Fashion Store</h1>
+  <h1>Trendy Kids Fashion Store</h1>
 </header>
+
 <nav>
   <a href="#">Home</a>
   <a href="#">Shop</a>
@@ -101,96 +102,96 @@
 
   <!-- Boys Outfit 1 -->
   <div class="product boys">
-    <img src="https://images.unsplash.com/photo-1593032465177-c35ecdb776f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Ym95cyBzaGlydHxlbnwwfHx8fDE2Nzg0NjMwNzU&ixlib=rb-4.0.3&q=80&w=400" alt="Boys Shirt">
+    <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Casual Boys Shirt">
     <h3>Casual Boys Shirt</h3>
-    <div class="price">$25</div>
+    <div class="price">$24.99</div>
     <div class="review">★★★★☆</div>
-    <div class="details">Perfect for school & casual outings. Pair with jeans or shorts.</div>
+    <div class="details">Soft cotton shirt, perfect for daily wear.</div>
     <button class="btn" onclick="addCart('Casual Boys Shirt')">Add to Cart</button>
   </div>
 
   <!-- Girls Outfit 1 -->
   <div class="product girls">
-    <img src="https://images.unsplash.com/photo-1580414057773-5669e5857b5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Onepiece">
-    <h3>Floral One-Piece</h3>
-    <div class="price">$30</div>
+    <img src="https://images.pexels.com/photos/930042/pexels-photo-930042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Girls White Dress">
+    <h3>Summer Girls Dress</h3>
+    <div class="price">$29.50</div>
     <div class="review">★★★★★</div>
-    <div class="details">Light and trendy for summer events. Matches with sandals or heels.</div>
-    <button class="btn" onclick="addCart('Floral One-Piece')">Add to Cart</button>
+    <div class="details">Light floral dress for sunny days.</div>
+    <button class="btn" onclick="addCart('Summer Girls Dress')">Add to Cart</button>
   </div>
 
   <!-- Boys Outfit 2 -->
   <div class="product boys">
-    <img src="https://images.unsplash.com/photo-1602810319225-b8b9a9d2d488?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Boys T-Shirt">
+    <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Boys Graphic T-Shirt">
     <h3>Graphic T-Shirt</h3>
-    <div class="price">$20</div>
+    <div class="price">$19.99</div>
     <div class="review">★★★☆☆</div>
-    <div class="details">Comfortable cotton T-shirt with trendy print. Great for daily wear.</div>
+    <div class="details">Fun print cotton tee.</div>
     <button class="btn" onclick="addCart('Graphic T-Shirt')">Add to Cart</button>
   </div>
 
   <!-- Girls Outfit 2 -->
   <div class="product girls">
-    <img src="https://images.unsplash.com/photo-1600185365721-7f1619f06160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Skirt">
-    <h3>Trendy Skirt</h3>
-    <div class="price">$22</div>
+    <img src="https://images.pexels.com/photos/1028693/pexels-photo-1028693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Girls Skirt Outfit">
+    <h3>Trendy Skirt Set</h3>
+    <div class="price">$26.75</div>
     <div class="review">★★★★☆</div>
-    <div class="details">Stylish mini skirt. Pair with crop tops or casual tees.</div>
-    <button class="btn" onclick="addCart('Trendy Skirt')">Add to Cart</button>
+    <div class="details">Casual set with top & skirt.</div>
+    <button class="btn" onclick="addCart('Trendy Skirt Set')">Add to Cart</button>
   </div>
 
   <!-- Boys Outfit 3 -->
   <div class="product boys">
-    <img src="https://images.unsplash.com/photo-1618354696402-9d3747f7d79b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Boys Jeans">
-    <h3>Slim Fit Jeans</h3>
-    <div class="price">$28</div>
+    <img src="https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Boys Jeans">
+    <h3>Denim Jeans</h3>
+    <div class="price">$28.00</div>
     <div class="review">★★★★☆</div>
-    <div class="details">Durable jeans for everyday adventures. Matches T-shirts or shirts.</div>
-    <button class="btn" onclick="addCart('Slim Fit Jeans')">Add to Cart</button>
+    <div class="details">Stylish stretchy denim for boys.</div>
+    <button class="btn" onclick="addCart('Denim Jeans')">Add to Cart</button>
   </div>
 
   <!-- Girls Outfit 3 -->
   <div class="product girls">
-    <img src="https://images.unsplash.com/photo-1593032465110-45d4e0a6d7b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Heels">
+    <img src="https://images.pexels.com/photos/2983467/pexels-photo-2983467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Girls Heels">
     <h3>Stylish Heels</h3>
-    <div class="price">$35</div>
+    <div class="price">$34.99</div>
     <div class="review">★★★★★</div>
-    <div class="details">Comfortable block heels for parties or casual events.</div>
+    <div class="details">Comfortable block heels for special days.</div>
     <button class="btn" onclick="addCart('Stylish Heels')">Add to Cart</button>
   </div>
 
   <!-- Boys Outfit 4 -->
   <div class="product boys">
-    <img src="https://images.unsplash.com/photo-1593032465171-f12c6b7f3622?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Boys Shoes">
+    <img src="https://images.pexels.com/photos/2529145/pexels-photo-2529145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Boys Sneakers">
     <h3>Sporty Sneakers</h3>
-    <div class="price">$40</div>
+    <div class="price">$39.99</div>
     <div class="review">★★★★☆</div>
-    <div class="details">Lightweight sneakers for sports or casual outings.</div>
+    <div class="details">Perfect shoes for running & play.</div>
     <button class="btn" onclick="addCart('Sporty Sneakers')">Add to Cart</button>
   </div>
 
   <!-- Girls Outfit 4 -->
   <div class="product girls">
-    <img src="https://images.unsplash.com/photo-1600185365722-7c99f9f06160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Girls Top">
-    <h3>Casual Top</h3>
-    <div class="price">$18</div>
+    <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=400" alt="Girls Top">
+    <h3>Casual Girls Top</h3>
+    <div class="price">$18.50</div>
     <div class="review">★★★☆☆</div>
-    <div class="details">Comfortable & stylish top, perfect for summer day out.</div>
-    <button class="btn" onclick="addCart('Casual Top')">Add to Cart</button>
+    <div class="details">Soft & comfy everyday top.</div>
+    <button class="btn" onclick="addCart('Casual Girls Top')">Add to Cart</button>
   </div>
 
 </div>
 
-<!-- WhatsApp Button -->
+<!-- WhatsApp Contact Button -->
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp">💬</a>
 
-<footer style="text-align:center; padding:20px; background:#333; color:white;">
-  &copy; 2026 Trendy Fashion Store. All Rights Reserved.
+<footer style="text-align:center; padding:18px; background:#222; color:white;">
+  &copy; 2026 Trendy Kids Fashion Store
 </footer>
 
 <script>
 function addCart(item){
-  alert(item + " has been added to your cart!");
+  alert("🛒 " + item + " added to cart!");
 }
 </script>
 

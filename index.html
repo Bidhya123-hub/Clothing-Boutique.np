@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trendify Store</title>
+<title>Trendify Clothing Store</title>
 <style>
 body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4;}
 header{background:#222;color:white;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;}
 header .logo{font-size:28px;color:#ff4d6d;font-weight:bold;}
 header nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
 header nav a:hover{color:#ffb347;}
-.banner{background:url('https://images.unsplash.com/photo-1618354695035-fbaf86d93c85?crop=entropy&cs=tinysrgb&fit=max&w=1200') center/cover no-repeat;height:300px;display:flex;align-items:center;justify-content:center;color:white;font-size:36px;font-weight:bold;text-shadow:2px 2px 5px rgba(0,0,0,0.7);}
+.banner{background:url('https://images.unsplash.com/photo-1602810310222-998d17f6c380?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;height:300px;display:flex;align-items:center;justify-content:center;color:white;font-size:36px;font-weight:bold;text-shadow:2px 2px 5px rgba(0,0,0,0.7);}
 .products{padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;}
 .product{background:white;border-radius:10px;padding:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;transition:0.3s;}
 .product:hover{transform:translateY(-8px);}
@@ -46,7 +46,7 @@ Trending Fashion 2026
 <section class="products">
 <!-- Product 1 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Boys Shirt">
+<img src="https://images.unsplash.com/photo-1618354695035-ff9a1e5bbebf?auto=format&fit=crop&w=600&q=80" alt="Boys Shirt">
 <h3>Classic Boys Shirt</h3>
 <p>$25</p>
 <button class="add-cart" onclick="addToCart('Classic Boys Shirt',25)">Add to Cart</button>
@@ -55,7 +55,7 @@ Trending Fashion 2026
 
 <!-- Product 2 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Boys Pant">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=600&q=80" alt="Boys Pant">
 <h3>Denim Boys Pant</h3>
 <p>$35</p>
 <button class="add-cart" onclick="addToCart('Denim Boys Pant',35)">Add to Cart</button>
@@ -64,7 +64,7 @@ Trending Fashion 2026
 
 <!-- Product 3 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Girls Shirt">
+<img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=600&q=80" alt="Girls Shirt">
 <h3>Girls Casual Shirt</h3>
 <p>$28</p>
 <button class="add-cart" onclick="addToCart('Girls Casual Shirt',28)">Add to Cart</button>
@@ -73,7 +73,7 @@ Trending Fashion 2026
 
 <!-- Product 4 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Girls Skirt">
+<img src="https://images.unsplash.com/photo-1520974735194-1c2bba7c0a52?auto=format&fit=crop&w=600&q=80" alt="Girls Skirt">
 <h3>Girls Trendy Skirt</h3>
 <p>$32</p>
 <button class="add-cart" onclick="addToCart('Girls Trendy Skirt',32)">Add to Cart</button>
@@ -82,7 +82,7 @@ Trending Fashion 2026
 
 <!-- Product 5 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Unisex T-shirt">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="Unisex T-shirt">
 <h3>Unisex T-Shirt</h3>
 <p>$20</p>
 <button class="add-cart" onclick="addToCart('Unisex T-Shirt',20)">Add to Cart</button>
@@ -91,7 +91,7 @@ Trending Fashion 2026
 
 <!-- Product 6 -->
 <div class="product">
-<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Shorts">
+<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2?auto=format&fit=crop&w=600&q=80" alt="Shorts">
 <h3>Summer Shorts</h3>
 <p>$22</p>
 <button class="add-cart" onclick="addToCart('Summer Shorts',22)">Add to Cart</button>
@@ -101,8 +101,9 @@ Trending Fashion 2026
 
 <section class="location">
 <h2>Our Store Location</h2>
-<p>New Baneshwor, Kathmandu, Nepal</p>
+<p>Trendify Store, Butwal, Nepal</p>
 <p>Open: 10AM - 8PM, Mon-Sat</p>
+<p>We deliver <strong>all over Nepal</strong></p>
 </section>
 
 <footer>
@@ -118,8 +119,8 @@ function addToCart(name, price){
 }
 
 function buyNow(name, price){
-  alert("Buying " + name + " for $" + price + ". Redirecting to payment...");
-  // Here you can redirect to payment page or WhatsApp link
+  alert("Buying " + name + " for $" + price + ". Redirecting to payment or WhatsApp...");
+  // Uncomment and replace number to redirect to WhatsApp for orders
   // window.location.href = "https://wa.me/9779800000000?text=I want to buy "+name;
 }
 </script>

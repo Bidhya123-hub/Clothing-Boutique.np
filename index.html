@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Fashion Trend 2026</title>
-
+<title>Fashion Store 2026</title>
 <style>
-
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background:#f4f4f4;
 }
 
 /* HEADER */
-
 header{
     background:black;
     color:white;
@@ -22,82 +19,106 @@ header{
     align-items:center;
     padding:15px 40px;
 }
-
 .logo{
     font-size:28px;
     font-weight:bold;
     color:gold;
 }
-
 .contact{
     font-size:16px;
 }
 
 /* NAVIGATION */
-
 nav{
     background:#333;
     text-align:center;
     padding:12px;
 }
-
 nav a{
     color:white;
     text-decoration:none;
     margin:20px;
     font-size:18px;
 }
-
 nav a:hover{
     color:gold;
 }
 
-/* MAIN */
-
+/* MAIN CONTENT */
 .container{
     width:90%;
     margin:auto;
     padding:30px;
 }
-
 .section-title{
     text-align:center;
     margin-bottom:25px;
 }
 
-/* GALLERY */
-
+/* GALLERY & CARDS */
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
-
 .card{
     background:white;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
     transition:0.3s;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
-
 .card:hover{
     transform:scale(1.05);
 }
-
 .card img{
     width:100%;
     height:300px;
     object-fit:cover;
 }
-
 .card h3{
     text-align:center;
-    padding:10px;
+    padding:10px 10px 5px 10px;
+}
+.price{
+    text-align:center;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:10px;
+}
+.button-container{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+.add-cart{
+    background:#ff9800;
+    color:white;
+}
+.add-cart:hover{
+    background:#e68900;
+}
+.buy-now{
+    background:#4caf50;
+    color:white;
+}
+.buy-now:hover{
+    background:#449d48;
 }
 
 /* CONTACT SECTION */
-
 .contact-section{
     background:white;
     margin-top:40px;
@@ -113,91 +134,105 @@ footer{
     padding:15px;
     margin-top:30px;
 }
-
 </style>
 </head>
-
 <body>
 
 <header>
-
 <div class="logo">FASHION STYLE</div>
-
-<div class="contact">
-📞 Contact: +977 9800000000
-</div>
-
+<div class="contact">📞 Contact: +977 9800000000</div>
 </header>
 
 <nav>
-
 <a href="#">Home</a>
 <a href="#">Boys Fashion</a>
 <a href="#">Girls Fashion</a>
 <a href="#">Contact</a>
-
 </nav>
 
 <div class="container">
 
 <h2 class="section-title">Girls Trending Dresses</h2>
-
 <div class="gallery">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
 <h3>Elegant Party Dress</h3>
+<div class="price">Rs 3,500</div>
+<div class="button-container">
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
 <h3>Floral Summer Dress</h3>
+<div class="price">Rs 2,800</div>
+<div class="button-container">
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
 <h3>Modern Street Fashion</h3>
+<div class="price">Rs 3,200</div>
+<div class="button-container">
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
+</div>
 </div>
 
 </div>
 
 <h2 class="section-title">Boys Trending Dresses</h2>
-
 <div class="gallery">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
 <h3>Casual Street Style</h3>
+<div class="price">Rs 3,000</div>
+<div class="button-container">
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
 <h3>Modern Suit Fashion</h3>
+<div class="price">Rs 4,500</div>
+<div class="button-container">
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d">
 <h3>Summer Casual Look</h3>
+<div class="price">Rs 2,900</div>
+<div class="button-container">
+<button class="add-cart">Add to Cart</button>
+<button class="buy-now">Buy Now</button>
+</div>
 </div>
 
 </div>
 
 <div class="contact-section">
-
 <h2>Contact Us</h2>
-
 <p>📍 Location: Butwal, Nepal</p>
 <p>📞 Phone: +977 9800000000</p>
 <p>📧 Email: fashionstyle@gmail.com</p>
-
 </div>
 
 </div>
 
 <footer>
-
 <p>© 2026 Fashion Style | All Rights Reserved</p>
-
 </footer>
 
 </body>
